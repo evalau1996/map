@@ -36,25 +36,89 @@
                 },
                 zoom: 11
             });
+            var contentString1 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Green Island</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:4.4</p>' +
+                '<p><b>PM10</b>:17.3</p>' +
+                '<p><b>PM10</b>:11.8</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow1 = new google.maps.InfoWindow({
+                content: contentString1
+            });
             var marker1 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.47124068633947, 114.36012268066405),
                 map: map,
                 title: 'GrassIsland'
+            });
+            marker1.addListener('click', function() {
+                infowindow1.open(map, marker1);
+            });
+            var contentString2 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Central and Western District</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:38</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:9.9</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow2 = new google.maps.InfoWindow({
+                content: contentString2
             });
             var marker2 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.28477553903247, 114.14440333843231),
                 map: map,
                 title: 'CentralandWestern'
             });
+            marker2.addListener('click', function() {
+                infowindow2.open(map, marker2);
+            });
+            var contentString3 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Eastern District</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:33.6</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:9.5</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow3 = new google.maps.InfoWindow({
+                content: contentString3
+            });
             var marker3 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.28283221646124, 114.21935498714447),
                 map: map,
                 title: 'Eastern'
             });
+            marker3.addListener('click', function() {
+                infowindow3.open(map, marker3);
+            });
+            var contentString4 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Kwun Tong</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:31.6</p>' +
+                '<p><b>PM10</b>:27</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow4 = new google.maps.InfoWindow({
+                content: contentString4
+            });
             var marker4 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.31335638426525, 114.22491520643234),
                 map: map,
                 title: 'KwunTong'
+            });
+            marker4.addListener('click', function() {
+                infowindow4.open(map, marker4);
             });
             var marker5 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.330184011107146, 114.1590964794159),
