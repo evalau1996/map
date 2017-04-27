@@ -120,25 +120,89 @@
             marker4.addListener('click', function() {
                 infowindow4.open(map, marker4);
             });
+            var contentString5 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Sham Shui Po</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:31.2</p>' +
+                '<p><b>PM10</b>:15.4</p>' +
+                '<p><b>PM10</b>:10.9</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow5 = new google.maps.InfoWindow({
+                content: contentString5
+            });
             var marker5 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.330184011107146, 114.1590964794159),
                 map: map,
                 title: 'ShamShuiPo'
+            });
+            marker5.addListener('click', function() {
+                infowindow5.open(map, marker5);
+            });
+            var contentString6 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Kwai Chung</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:47.7</p>' +
+                '<p><b>PM10</b>:13</p>' +
+                '<p><b>PM10</b>:11.3</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow6 = new google.maps.InfoWindow({
+                content: contentString6
             });
             var marker6 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.357101014955106, 114.1296136379242),
                 map: map,
                 title: 'KwaiChung'
             });
+            marker6.addListener('click', function() {
+                infowindow6.open(map, marker6);
+            });
+            var contentString7 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tsuen Wan</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:42.1</p>' +
+                '<p><b>PM10</b>:14.3</p>' +
+                '<p><b>PM10</b>:10.2</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow7 = new google.maps.InfoWindow({
+                content: contentString7
+            });
             var marker7 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.371720846777613, 114.11450743675232),
                 map: map,
                 title: 'TsuenWan'
             });
+            marker7.addListener('click', function() {
+                infowindow7.open(map, marker7);
+            });
+            var contentString8 = '<div id="content">' +
+                '<div id="siteNotice">' +
+                '</div>' +
+                '<h1 id="firstHeading" class="firstHeading">Tsueng Kwan O</h1>' +
+                '<div id="bodyContent">' +
+                '<p><b>NO2</b>:12.4</p>' +
+                '<p><b>PM10</b>:20.3</p>' +
+                '<p><b>PM10</b>:12.7</p>' +
+                '</div>' +
+                '</div>';
+            var infowindow8 = new google.maps.InfoWindow({
+                content: contentString8
+            });
             var marker8 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.31761931029719, 114.25947278738022),
                 map: map,
                 title: 'TKO'
+            });
+            marker8.addListener('click', function() {
+                infowindow8.open(map, marker8);
             });
             var marker9 = new google.maps.Marker({
                 position: new google.maps.LatLng(22.44515889835453, 114.02272760868073),
