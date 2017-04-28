@@ -1,0 +1,138 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Eva's ECharts</title>
+        <!-- Use echarts.js -->
+        <script src="echarts.min.js"></script>
+        <script src="map.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+
+    <body>
+        <div class="page-header">
+            <h3 style="color:blueviolet;font-family: Georgia, 'Times New Roman', Times, serif">Contaminant Source in Hong Kong,2015</h3>
+        </div>
+        <div id="main1" style="width:600px;height:400px;"></div>
+        <script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart1 = echarts.init(document.getElementById('main1'));
+            //指定圖表的配置項和數據
+            option = {
+                title: {
+                    text: 'Nitric Oxide',
+                    subtext: 'EPD HK',
+                    x: 'right'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+                },
+                series: [{
+                    name: 'Contaminant Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [{
+                        value: 16200,
+                        name: 'Road Traffic'
+                    }, {
+                        value: 26090,
+                        name: 'Public Electricity'
+                    }, {
+                        value: 33900,
+                        name: 'Water Transport'
+                    }, {
+                        value: 5000,
+                        name: 'Civil Aviation'
+                    }, {
+                        value: 10450,
+                        name: 'Other Burning'
+                    }, {
+                        value: 0,
+                        name: 'Non-Burning'
+                    }, {
+                        value: 60,
+                        name: 'Biomass'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            //使用剛指定的配置項和數據顯示圖表
+            myChart1.setOption(option);
+        </script>
+        <div id="main2" style="width:600px;height:400px;"></div>
+        <script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart2 = echarts.init(document.getElementById('main2'));
+            //指定圖表的配置項和數據
+            option = {
+                title: {
+                    text: 'PM10',
+                    subtext: 'EPD HK',
+                    x: 'right'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+                },
+                series: [{
+                    name: 'Contaminant Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [{
+                        value: 490,
+                        name: 'Road Traffic'
+                    }, {
+                        value: 580,
+                        name: 'Public Electricity'
+                    }, {
+                        value: 1860,
+                        name: 'Water Transport'
+                    }, {
+                        value: 50,
+                        name: 'Civil Aviation'
+                    }, {
+                        value: 800,
+                        name: 'Other Burning'
+                    }, {
+                        value: 910,
+                        name: 'Non-Burning'
+                    }, {
+                        value: 740,
+                        name: 'Biomass'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
+            //使用剛指定的配置項和數據顯示圖表
+            myChart2.setOption(option);
+        </script>
+
+    </body>
+
+    </html>
