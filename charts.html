@@ -195,11 +195,132 @@
         <div class="page-header2">
             <h3 style="color:blue;font-family: Georgia, 'Times New Roman', Times, serif">Composition of Automobile Exhaust Gas</h3>
         </div>
-        <div id="main3" style="width:600px;height:400px;"></div>
+        <div id="main4" style="width:600px;height:400px;"></div>
         <script type="text/javascript">
             //基於準備好的dom，初始化echarts實例
             var myChart4 = echarts.init(document.getElementById('main4'));
             //指定圖表的配置項和數據
+            option = {
+                tooltip: {},
+                animationDurationUpdate: 1500,
+                animationEasingUpdate: 'quinticInOut',
+                series: [{
+                    type: 'graph',
+                    layout: 'none',
+                    symbolSize: 90,
+                    roam: true,
+                    label: {
+                        normal: {
+                            show: true
+                        }
+                    },
+                    data: [{
+                        name: 'SO2',
+                        x: 20,
+                        y: 700
+                    }, {
+                        name: 'NO2',
+                        x: 130,
+                        y: 700
+                    }, {
+                        name: 'O3',
+                        x: 250,
+                        y: 700
+                    }, {
+                        name: 'CO',
+                        x: 370,
+                        y: 700
+                    }, {
+                        name: 'PM10',
+                        x: 490,
+                        y: 700
+                    }, {
+                        name: 'PM2.5',
+                        x: 610,
+                        y: 700
+                    }, {
+                        name: 'Pb',
+                        x: 730,
+                        y: 700
+                    }, {
+                        name: 'Diesel Car',
+                        x: 300,
+                        y: 300
+                    }, {
+                        name: 'Car',
+                        x: 50,
+                        y: 300
+                    }, {
+                        name: 'Leady Gasoline',
+                        x: 730,
+                        y: 300
+                    }],
+                    // links: [],
+                    links: [{
+                        source: 0,
+                        target: 1,
+                        symbolSize: [5, 20],
+                        label: {
+                            normal: {
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                width: 5,
+                                curveness: 0.2
+                            }
+                        }
+                    }, {
+                        source: '节点2',
+                        target: '节点1',
+                        label: {
+                            normal: {
+                                show: true
+                            }
+                        },
+                        lineStyle: {
+                            normal: {
+                                curveness: 0.2
+                            }
+                        }
+                    }, {
+                        source: 'Diesel Car',
+                        target: 'SO2'
+                    }, {
+                        source: 'Diesel Car',
+                        target: 'NO2'
+                    }, {
+                        source: 'Diesel Car',
+                        target: 'PM10'
+                    }, {
+                        source: 'Car',
+                        target: 'SO2'
+                    }, {
+                        source: 'Car',
+                        target: 'NO2'
+                    }, {
+                        source: 'Car',
+                        target: 'CO'
+                    }, {
+                        source: 'Car',
+                        target: 'PM10'
+                    }, {
+                        source: 'Car',
+                        target: 'PM2.5'
+                    }, {
+                        source: 'Leady Gasoline',
+                        target: 'Pb'
+                    }],
+                    lineStyle: {
+                        normal: {
+                            opacity: 0.9,
+                            width: 2,
+                            curveness: 0
+                        }
+                    }
+                }]
+            };
             //使用剛指定的配置項和數據顯示圖表
             myChart4.setOption(option);
         </script>
