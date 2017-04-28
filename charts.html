@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <div class="page-header">
+        <div class="page-header1">
             <h3 style="color:blueviolet;font-family: Georgia, 'Times New Roman', Times, serif">Contaminant Source in Hong Kong,2015</h3>
         </div>
         <div id="main1" style="width:600px;height:400px;"></div>
@@ -132,7 +132,77 @@
             //使用剛指定的配置項和數據顯示圖表
             myChart2.setOption(option);
         </script>
+        <div id="main3" style="width:600px;height:400px;"></div>
+        <script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart3 = echarts.init(document.getElementById('main3'));
+            //指定圖表的配置項和數據
+            option = {
+                title: {
+                    text: 'PM2.5',
+                    subtext: 'EPD HK',
+                    x: 'right'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['Road Traffic', 'Public Electricity', 'Water Transport', 'Civil Aviation', 'Other Burning', 'Non-Burning', 'Biomass Burning']
+                },
+                series: [{
+                    name: 'Contaminant Source',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [{
+                        value: 450,
+                        name: 'Road Traffic'
+                    }, {
+                        value: 290,
+                        name: 'Public Electricity'
+                    }, {
+                        value: 1690,
+                        name: 'Water Transport'
+                    }, {
+                        value: 50,
+                        name: 'Civil Aviation'
+                    }, {
+                        value: 740,
+                        name: 'Other Burning'
+                    }, {
+                        value: 470,
+                        name: 'Non-Burning'
+                    }, {
+                        value: 600,
+                        name: 'Biomass'
+                    }],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }]
+            };
 
+            //使用剛指定的配置項和數據顯示圖表
+            myChart3.setOption(option);
+        </script>
+        <div class="page-header2">
+            <h3 style="color:blue;font-family: Georgia, 'Times New Roman', Times, serif">Composition of Automobile Exhaust Gas</h3>
+        </div>
+        <div id="main3" style="width:600px;height:400px;"></div>
+        <script type="text/javascript">
+            //基於準備好的dom，初始化echarts實例
+            var myChart4 = echarts.init(document.getElementById('main4'));
+            //指定圖表的配置項和數據
+            //使用剛指定的配置項和數據顯示圖表
+            myChart4.setOption(option);
+        </script>
     </body>
 
     </html>
